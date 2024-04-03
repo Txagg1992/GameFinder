@@ -18,7 +18,7 @@ interface GameDao {
         """
             SELECT *
             FROM gamelistingentity
-            WHERE LOWER(aliases) LIKE '%' || LOWER(:query) || '%'
+            WHERE LOWER(name) LIKE '%' || LOWER(:query) || '%'
         """
     )
     suspend fun searchGameList(query: String): List<GameListingEntity>

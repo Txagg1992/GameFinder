@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 data class GameListingEntity(
     @PrimaryKey
     val id: Int? = null,
-    val aliases: String,
+    val name: String,
     val deck: String,
     val description: String
 )

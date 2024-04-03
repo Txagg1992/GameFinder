@@ -5,7 +5,7 @@ import com.curiousapps.gamefinder.domain.model.GameListing
 
 fun GameListingEntity.toGameListing(): GameListing{
     return GameListing(
-        aliases = aliases,
+        name = name,
         deck = deck,
         description = description,
     )
@@ -13,7 +13,7 @@ fun GameListingEntity.toGameListing(): GameListing{
 
 fun GameListing.toGameListingEntity(): GameListingEntity{
     return GameListingEntity(
-        aliases = aliases,
+        name = name,
         deck = deck,
         description = description,
     )
