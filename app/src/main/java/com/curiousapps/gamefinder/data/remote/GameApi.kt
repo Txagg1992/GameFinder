@@ -10,7 +10,13 @@ interface GameApi {
     suspend fun getGames(
         @Query("api_key") apiKey: String = API_KEY,
         @Query("format") format: String = FORMAT,
-        @Query("filter") name: String
+    ): ResponseBody
+
+    @GET("game/[guid]")
+    suspend fun getGame(
+        @Query("api_key") apiKey: String = API_KEY,
+        @Query("format") format: String = FORMAT,
+        @Query("guid") guid: String,
     ): ResponseBody
 
     companion object{
